@@ -11,92 +11,6 @@
 
 这一周，阅读了大量博客和知乎问答(后有链接)，同时分别尝试了用正则表达式、beautifulsoup、pyquery解析网页，之后尝试了scrapy和pyspider爬虫框架，精力有限，Nutch留到之后来了解；
 
-# “最好用”的开源框架
-个人认为，没有绝对意义上的”最好用“的框架，针对不同的需求，每种框架有各自的优势，而决定一个爬虫框架/软件优劣的大概有以下几个方面：
-
-1、易用性
-框架和软件实现网页抓取和调试的难度；相比于scrapy的命令行调试，pyspider的图形化界面个人感觉就很“省力”（当然也是自己命令行功夫不到家）
-
-2、反爬能力：
-对接代理池、cookie池是否方便；Ajax动态页面抓取是否方便；对于加载算法太复杂的网站，实现浏览器模拟登录、渲染是否方便；
-
-3、数据对接问题
-是否支持与各种数据库和消息队列的对接；目前大部分爬虫框架都支持蛮好的。
-
-4、是否支持分布处理：
-如果是大型项目，有大量的爬取需求，单机显然是不现实的，分布式部署就显得很关键；分布式部署的环境配置也比较麻烦，如果能支持Docker部署就很赞了。
-
-5、扩展问题
-比如pyspider相比于scrapy，虽然可以快速实现网页爬虫，但是可扩展程度不足；scrapy对接Middleware、Pipeline可以应对各种反爬能力较强的网站；
-
-
-# 解析库
-
-0、正则表达式
-
-1、beautifulsoup
-
-2、pyquery 
-
-3、Xpath （未尝试）
-自己只尝试了前三种，beautifulsoup和pyquery功能都很强大，至于孰优孰劣，觉得还是看个人的熟练程度；
-
-# 框架对比
-## 一、scrapy:
-[Scrapy-官方文档](https://docs.scrapy.org/en/latest/) - Python爬虫
-
-架构非常清晰，大家都说功能十分强大；
-
-然只实现了简单的网页爬取，但是
-内置了Xpath和css选择器，好像没有beautifulsoup？不过css选择器失恋了之后还是很方便的；
-
-### 不足
-相比于pysipder，需要命令行调试；
-
-
-## 二、pyspider 
-[PySpider-官方文档](http://docs.pyspider.org/en/latest/) - python爬虫
-### 优点
-图形化的操作界面简直太惊艳了，用WebUI实现网页的抓取和分析（是内置了PyQuery解析库的，但是图形化操作真的方便）；可以实时监控爬取进度，不同颜色表示不同的返回情况；爬取结果可以直接以json、csv等各种格式导出；对于各种数据库的后端支持也很好，目前值尝试了mongodb，其他还没有操作；
-其他高阶功能：
-分布式部署；Docker部署；
-对接PhantomJS，可实现动态渲染的抓取；
-支持各种消息队列；
-
-### 不足
-可扩展性较差
-
-## 三、Nutch
-
-Nutch是一个基于Lucene，类似Google的完整网络搜索引擎解决方案，基于Hadoop的分布式处理模型保证了系统的性能，类似Eclipse的插件机制保证了系统的可客户化，而且很容易集成到自己的应用之中。
-
-### 不足
-Nutch依赖hadoop运行，hadoop本身会消耗很多的时间。如果集群机器数量较少，爬取速度反而不如单机爬虫快。
-
-具体本周实在精力有限，之后再细细了解！
-
-
-【参考文档】
-[Python有哪些常见的、好用的爬虫框架？](https://www.zhihu.com/question/60280580/answer/617068010)
-
-[知乎回答: 开源爬虫框架各有什么优缺点？](https://www.zhihu.com/question/27042168/answer/70821088)
-
-[开源爬虫Labin，Nutch，Neritrix介绍和对比](https://www.open-open.com/bbs/view/1325332257061)
-
-[知乎：50种最棒的开源爬虫框架/项目](https://zhuanlan.zhihu.com/p/64305013)
-
-【待看优秀项目】
-
-[GitHub 上有哪些优秀的 Python 爬虫项目？](https://www.zhihu.com/question/58151047/answer/640461600)
-
-一个爬虫排名，不知道是否客观，待研究……
-[Top 50 open source web crawlers for data mining](https://bigdata-madesimple.com/top-50-open-source-web-crawlers-for-data-mining/)
-
-## 爬虫的正当性
-[爬虫的合法性问题](https://www.zhihu.com/question/291554395/answer/476074383)
-
-[友情提示：爬虫违法](https://zhuanlan.zhihu.com/p/54013381)
-
 ---
 
 # Challenge： 总共实现了四个小爬虫
@@ -202,5 +116,27 @@ Item Pipeline的主要作用清洗 HTML 数据，验证爬取数据，检查爬�
 
 爬虫还是蛮有意思的(除了密密麻麻的前端代码)，想要好好研究一下。
 
+
+
+【参考文档】
+[Python有哪些常见的、好用的爬虫框架？](https://www.zhihu.com/question/60280580/answer/617068010)
+
+[知乎回答: 开源爬虫框架各有什么优缺点？](https://www.zhihu.com/question/27042168/answer/70821088)
+
+[开源爬虫Labin，Nutch，Neritrix介绍和对比](https://www.open-open.com/bbs/view/1325332257061)
+
+[知乎：50种最棒的开源爬虫框架/项目](https://zhuanlan.zhihu.com/p/64305013)
+
+【待看优秀项目】
+
+[GitHub 上有哪些优秀的 Python 爬虫项目？](https://www.zhihu.com/question/58151047/answer/640461600)
+
+一个爬虫排名，不知道是否客观，待研究……
+[Top 50 open source web crawlers for data mining](https://bigdata-madesimple.com/top-50-open-source-web-crawlers-for-data-mining/)
+
+## 爬虫的正当性
+[爬虫的合法性问题](https://www.zhihu.com/question/291554395/answer/476074383)
+
+[友情提示：爬虫违法](https://zhuanlan.zhihu.com/p/54013381)
 
 
