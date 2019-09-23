@@ -79,9 +79,15 @@ PhantomJS-2.2.1 + MongoDB + PyMongo 库
 
 5、代码只需修改Handler类，逻辑和1.1相同；
 
-### PS：
-这个图形化操作方式真的很难用语言描述，还是建议大家上手尝试一下，真的很爽！
+6、运行，实时监控；
 
+### 数据导出
+
+运行结束后，可以直接到处为json或csv文件，本次直接导出为csv文件，保存在data文件中！
+
+
+### PS：
+这个图形化操作方式真的很难用语言描述，还是建议大家上手尝试一下，真的很爽！相比于1.1节的抓取，图形化便捷很多！
 
 # 3、[scrapy - 抓取静态网站](https://github.com/rush3stone/webSpiders/tree/master/OrangeSpider)
 
