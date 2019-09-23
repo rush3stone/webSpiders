@@ -19,7 +19,8 @@
 
 ## 1. 无框架爬取（静态、动态）
 
-### 1.1、实现豆瓣读书（分别使用正则表达式 和 beautifulsoup）
+### 1.1、[实现豆瓣读书（分别使用正则表达式 和 beautifulsoup）](https://github.com/rush3stone/webSpiders/blob/master/testSpiders/doubanBooks.py)
+
 **页面类型**：豆瓣读书排行属于静态页面，十分易于爬取；
 
 **URL构造**：针对多个页面，点击不同页面观察其url的变化，发现只有start部分变为一个新数字，通过推算，应该表示当前的项目序号！这样就可以构造url了
@@ -27,7 +28,9 @@
 **页面解析**：分别使用正则表达式和beautifulsoup进行解析；具体逻辑请移步代码；
 
 
-### 1.2 爬取微博内容（Ajax动态加载）
+### 1.2 [爬取微博内容（Ajax动态加载）](https://github.com/rush3stone/webSpiders/blob/master/testSpiders/weiboSpider.py)
+
+
 **页面类型**： 结论：Ajax动态加载；
 浏览微博时，随着你不断向下滚动，新的内容会不断出现。如果我们以上一爬虫的抓取方法，抓取结果只有初始加载的几十行html代码，没有任何有用信息，显然有问题； 
 
@@ -47,6 +50,8 @@
 	
 
 # 2、pyspider + phantomjs 抓取豆瓣图书排行
+
+[Handler文件](https://github.com/rush3stone/webSpiders/blob/master/testSpiders/testPyspider.py)
 
 ### **环境配置**
 
@@ -78,7 +83,9 @@ PhantomJS-2.2.1 + MongoDB + PyMongo 库
 这个图形化操作方式真的很难用语言描述，还是建议大家上手尝试一下，真的很爽！
 
 
-# 3、scrapy 
+# 3、scrapy  
+[实现代码](https://github.com/rush3stone/webSpiders/tree/master/OrangeSpider)
+
 目标网站：http://www.juzizhai.com/doc/mingyan/mingren/
 ### 环境配置
 Ubuntu 18.04 + MongoDB + PyMongo 库
