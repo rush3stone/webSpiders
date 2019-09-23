@@ -47,7 +47,7 @@
 **数据存储**
 
 数据保存到MongoDB中；
-	
+
 
 # 2、pyspider + phantomjs 抓取豆瓣图书排行
 
@@ -55,8 +55,7 @@
 
 ### **环境配置**
 
-Ubuntu 18.04 +
-PhantomJS-2.2.1 + MongoDB + PyMongo 库
+Ubuntu 18.04 + PhantomJS-2.2.1 + MongoDB + PyMongo库 + 数据库可视化工具Robo 3Td-1.3
 
 可能出现的问题：
 1、 PhantomJS已在后台启动，会报错；
