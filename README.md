@@ -83,8 +83,7 @@ PhantomJS-2.2.1 + MongoDB + PyMongo 库
 这个图形化操作方式真的很难用语言描述，还是建议大家上手尝试一下，真的很爽！
 
 
-# 3、scrapy  
-[实现代码](https://github.com/rush3stone/webSpiders/tree/master/OrangeSpider)
+# 3、[scrapy - 抓取静态网站](https://github.com/rush3stone/webSpiders/tree/master/OrangeSpider)
 
 目标网站：http://www.juzizhai.com/doc/mingyan/mingren/
 ### 环境配置
